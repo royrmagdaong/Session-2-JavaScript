@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Hello JavaScript</h1>
+    <h1 id="my-header">Hello JavaScript</h1>
 
 
 
@@ -253,21 +253,33 @@
         // console.log(student.grade)
 
         // object methods
-        let cat = {
-            name: 'pstt',
-            speak: function(){
-                console.log('meow')
-            },
-            walk: function(){
-                console.log('walking...')
-            },
-            bite: function(){
-                console.log('biting...')
-            }
-        }
+        // let cat = {
+        //     name: 'pstt',
+        //     speak: function(){
+        //         console.log('meow')
+        //     },
+        //     walk: function(){
+        //         console.log('walking...')
+        //     },
+        //     bite: function(){
+        //         console.log('biting...')
+        //     }
+        // }
 
-        cat.speak()
-        cat.walk()
+        // cat.speak()
+        // cat.walk()
+
+
+        let h1 = document.getElementById("my-header");
+        // h1.textContent = "Hello World!"
+        // h1.style.color = "red"
+        let size = 64;
+        h1.addEventListener('click', function(){
+            h1.style.color = "blue"
+            h1.style.fontSize = size + 'px'
+            size++;
+        })
+
 
     </script>
 </body>
