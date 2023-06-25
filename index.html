@@ -4,11 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .my-class{
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
     <h1 id="my-header">Hello JavaScript</h1>
 
+    <div id="my-div">
 
+    </div>
 
 
 
@@ -270,16 +277,26 @@
         // cat.walk()
 
 
-        let h1 = document.getElementById("my-header");
-        // h1.textContent = "Hello World!"
-        // h1.style.color = "red"
-        let size = 64;
-        h1.addEventListener('click', function(){
-            h1.style.color = "blue"
-            h1.style.fontSize = size + 'px'
-            size++;
-        })
+        // let h1 = document.getElementById("my-header");
+        // // h1.textContent = "Hello World!"
+        // // h1.style.color = "red"
+        // // let size = 64;
+        // // h1.addEventListener('click', function(){
+        // //     h1.style.color = "blue"
+        // //     h1.style.fontSize = size + 'px'
+        // //     size++;
+        // // })
 
+        // h1.setAttribute("class", "my-class");
+        
+        // add element
+        let myDiv = document.getElementById("my-div");
+        let p = document.createElement('button');
+        p.textContent = 'Click me!'
+        myDiv.appendChild(p)
+
+        // remove element
+        myDiv.removeChild(p)
 
     </script>
 </body>
