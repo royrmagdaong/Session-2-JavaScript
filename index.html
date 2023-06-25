@@ -105,19 +105,43 @@
         // else if statement
 
         // 1st example
-        let x = 1;
-        let y = 10;
-        let z = -5;
+        // let x = 1;
+        // let y = 10;
+        // let z = -5;
 
-        if((y>z) && (x<z)){
-            x = 10;
-        }else if((z<=y) || (z>=x)){
-            x = 20;
+        // if((y>z) && (x<z)){
+        //     x = 10;
+        // }else if((z<=y) || (z>=x)){
+        //     x = 20;
+        // }else{
+        //     x = 0;
+        // }
+
+        // console.log("x: ",x)
+
+        // 2nd example else if statement
+        let grade = 0;
+        let recitation = 100; // 15%
+        let attendance = 100; // 10%
+        let project = 100; // 30%
+        let quizzes = 100; // 20%
+        let exam = 100; // 25%
+
+        grade = (recitation * 0.15) + (attendance * 0.1)+ (project * 0.30) + (quizzes * 0.20) +  (exam * 0.25);
+
+        if(grade < 75){
+            console.log("Grade: ", grade)
+            console.log("Failed!")
+        }else if(grade >= 75 && grade <= 85){
+            console.log("Grade: ", grade)
+            console.log("Passed!")
+        }else if(grade >= 86 && grade <= 95){ 
+            console.log("Grade: ", grade)
+            console.log("Very Good!")
         }else{
-            x = 0;
+            console.log("Grade: ", grade)
+            console.log("Excellent!")
         }
-
-        console.log("x: ",x)
 
     </script>
 </body>
