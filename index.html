@@ -298,13 +298,31 @@
         // // remove element
         // myDiv.removeChild(p)
 
-        let h1 = document.getElementById("my-header");
-        // h1.addEventListener('mouseover', function(){
-        //     console.log('Mouse over')
+        // let h1 = document.getElementById("my-header");
+        // // h1.addEventListener('mouseover', function(){
+        // //     console.log('Mouse over')
+        // // })
+
+        // h1.addEventListener('mouseout', function(){
+        //     console.log('Mouse out')
         // })
 
-        h1.addEventListener('mouseout', function(){
-            console.log('Mouse out')
+        // fetch APIs
+        let myDiv = document.getElementById("my-div");
+
+        fetch("https://pokeapi.co/api/v2/pokemon").then(function(response){
+            return response.json()
+        }).then(function (data){
+            let index = 0;
+            data.results.forEach(element => {
+                let p = document.createElement('p');
+                p.textContent = data.results[index].name
+                myDiv.appendChild(p)
+                index++;
+            });
+            console.log(data)
+        }).catch(function(error){
+            console.log(error)
         })
 
     </script>
