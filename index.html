@@ -120,28 +120,49 @@
         // console.log("x: ",x)
 
         // 2nd example else if statement
-        let grade = 0;
-        let recitation = 100; // 15%
-        let attendance = 100; // 10%
-        let project = 100; // 30%
-        let quizzes = 100; // 20%
-        let exam = 100; // 25%
+        // let grade = 0;
+        // let recitation = 100; // 15%
+        // let attendance = 100; // 10%
+        // let project = 100; // 30%
+        // let quizzes = 100; // 20%
+        // let exam = 100; // 25%
 
-        grade = (recitation * 0.15) + (attendance * 0.1)+ (project * 0.30) + (quizzes * 0.20) +  (exam * 0.25);
+        // grade = (recitation * 0.15) + (attendance * 0.1)+ (project * 0.30) + (quizzes * 0.20) +  (exam * 0.25);
 
-        if(grade < 75){
-            console.log("Grade: ", grade)
-            console.log("Failed!")
-        }else if(grade >= 75 && grade <= 85){
-            console.log("Grade: ", grade)
-            console.log("Passed!")
-        }else if(grade >= 86 && grade <= 95){ 
-            console.log("Grade: ", grade)
-            console.log("Very Good!")
-        }else{
-            console.log("Grade: ", grade)
-            console.log("Excellent!")
+        // if(grade < 75){
+        //     console.log("Grade: ", grade)
+        //     console.log("Failed!")
+        // }else if(grade >= 75 && grade <= 85){
+        //     console.log("Grade: ", grade)
+        //     console.log("Passed!")
+        // }else if(grade >= 86 && grade <= 95){ 
+        //     console.log("Grade: ", grade)
+        //     console.log("Very Good!")
+        // }else{
+        //     console.log("Grade: ", grade)
+        //     console.log("Excellent!")
+        // }
+
+        // switch statement
+        let choice = 'a';
+        let answer = '';
+        switch(choice){
+            case 'a':
+                answer = 'dog'
+                break;
+            case 'b':
+                answer = 'cat'
+                break;
+            case 'c':
+                answer = 'bird'
+                break;
+            case 'd':
+                answer = 'snake'
+                break;
+            default:
+                answer = 'none of the above answer'
         }
+        console.log(answer)
 
     </script>
 </body>
