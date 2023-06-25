@@ -210,21 +210,21 @@
         // addTwoNumbers(22, 1);
         // addTwoNumbers(5, 3);
 
-        function findMin(x, y){
-            if(x < y){
-                // console.log("x:", x)
-                return x
-            }else if(y < x){
-                // console.log("y:", y)
-                return y
-            }else{
-                console.log('they are equal')
-                return "they are equal"
-            }
-        }
+        // function findMin(x, y){
+        //     if(x < y){
+        //         // console.log("x:", x)
+        //         return x
+        //     }else if(y < x){
+        //         // console.log("y:", y)
+        //         return y
+        //     }else{
+        //         console.log('they are equal')
+        //         return "they are equal"
+        //     }
+        // }
 
-        let answer = findMin(1, 99)
-        console.log(answer)
+        // let answer = findMin(1, 99)
+        // console.log(answer)
 
         // findMin(10, 5);
         // findMin(5, 5);
@@ -238,6 +238,36 @@
         // console.log(product)
 
         // console.log(multiplyTwoNumbers(10, 5) + 1)
+
+        // adding and modifying objects
+        // let student = {
+        //     name: "John",
+        //     course: "BSIT",
+        //     section: "A",
+        //     id_number: '123'
+        // }
+        // student["course"] = "BSECE"
+        // student.course = "BSCS"
+        // console.log(student["course"]);
+        // student.grade = 99;
+        // console.log(student.grade)
+
+        // object methods
+        let cat = {
+            name: 'pstt',
+            speak: function(){
+                console.log('meow')
+            },
+            walk: function(){
+                console.log('walking...')
+            },
+            bite: function(){
+                console.log('biting...')
+            }
+        }
+
+        cat.speak()
+        cat.walk()
 
     </script>
 </body>
