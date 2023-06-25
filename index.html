@@ -290,13 +290,22 @@
         // h1.setAttribute("class", "my-class");
         
         // add element
-        let myDiv = document.getElementById("my-div");
-        let p = document.createElement('button');
-        p.textContent = 'Click me!'
-        myDiv.appendChild(p)
+        // let myDiv = document.getElementById("my-div");
+        // let p = document.createElement('button');
+        // p.textContent = 'Click me!'
+        // myDiv.appendChild(p)
 
-        // remove element
-        myDiv.removeChild(p)
+        // // remove element
+        // myDiv.removeChild(p)
+
+        let h1 = document.getElementById("my-header");
+        // h1.addEventListener('mouseover', function(){
+        //     console.log('Mouse over')
+        // })
+
+        h1.addEventListener('mouseout', function(){
+            console.log('Mouse out')
+        })
 
     </script>
 </body>
