@@ -101,11 +101,24 @@
         // null
         // undefined
         // NaN (Not a Number)
-
-        if(null){
-            console.log('Hello JavaScript If Statement');
-        }
         
+        // else if statement
+
+        // 1st example
+        let x = 1;
+        let y = 10;
+        let z = -5;
+
+        if((y>z) && (x<z)){
+            x = 10;
+        }else if((z<=y) || (z>=x)){
+            x = 20;
+        }else{
+            x = 0;
+        }
+
+        console.log("x: ",x)
+
     </script>
 </body>
 </html>
