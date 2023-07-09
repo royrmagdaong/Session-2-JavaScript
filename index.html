@@ -308,22 +308,189 @@
         // })
 
         // fetch APIs
-        let myDiv = document.getElementById("my-div");
+        // let myDiv = document.getElementById("my-div");
 
-        fetch("https://pokeapi.co/api/v2/pokemon").then(function(response){
-            return response.json()
-        }).then(function (data){
-            let index = 0;
-            data.results.forEach(element => {
-                let p = document.createElement('p');
-                p.textContent = data.results[index].name
-                myDiv.appendChild(p)
-                index++;
-            });
-            console.log(data)
-        }).catch(function(error){
-            console.log(error)
-        })
+        // fetch("https://pokeapi.co/api/v2/pokemon").then(function(response){
+        //     return response.json()
+        // }).then(function (data){
+        //     let index = 0;
+        //     data.results.forEach(element => {
+        //         let p = document.createElement('p');
+        //         p.textContent = data.results[index].name
+        //         myDiv.appendChild(p)
+        //         index++;
+        //     });
+        //     console.log(data)
+        // }).catch(function(error){
+        //     console.log(error)
+        // })
+
+
+        // OOP
+
+        // abstraction
+
+        // class Circle {
+        //     constructor(radius) {
+        //         this.radius = radius;
+        //         console.log('radius:', this.radius)
+        //     }
+
+        //     calculateArea() {
+        //         this.area = Math.PI * this.radius * this.radius;
+        //         console.log('Area: ', this.area)
+        //         return this.area;
+        //     }
+        // }
+
+        // const myCircle = new Circle(5); // Abstraction of a circle
+        // const myCircle2 = new Circle(10); // Abstraction of a circle
+        // const area = myCircle.calculateArea(); // Abstraction of area calculation
+        // const area2 = myCircle2.calculateArea(); // Abstraction of area calculation
+
+
+        // encapsulation
+        // class Person {
+        //     constructor(name, age) {
+        //         this.name = name;
+        //         this._age = age;
+        //         this._isAdult = age >= 18; // Encapsulated property
+        //     }
+
+        //     get isAdult() {
+        //         return this._isAdult; // Encapsulated getter method
+        //     }
+        //     set isAdult(value) {
+        //         throw new Error('isAdult is a derived property and cannot be modified.'); // Encapsulated setter method
+        //     }
+
+        //     get age() {
+        //         // throw new Error('age is a derived property and cannot be modified.'); // Encapsulated setter method
+        //         return this._age;
+        //     }
+        //     set age(value) {
+        //         throw new Error('age is a derived property and cannot be modified.'); // Encapsulated setter method
+        //         // this._age = value
+        //     }
+            
+        //     sayHello() {
+        //         console.log(`Hello, my name is ${this.name}.`);
+        //     }
+        // }
+
+        // const john = new Person('John Doe', 25);
+        // john.sayHello(); // Outputs: Hello, my name is John Doe.
+
+        // console.log(john.isAdult); // Outputs: true
+        // // john.isAdult = false; // Throws an error (setter is encapsulated)
+        // // john.age = 30;
+        // console.log(john._age)
+        
+        // const john = new Person('John Doe', 25);
+
+
+        // inheritance
+        // class Animal {
+        //     constructor(name) {
+        //         this.name = name;
+        //     }
+
+        //     speak() {
+        //         console.log(`${this.name} makes a sound.`);
+        //     }
+        // }
+
+        // class Dog extends Animal {
+        //     constructor(name, breed) {
+        //         super(name); // Calls the parent class constructor
+        //         this.breed = breed;
+        //     }
+
+        //     speak() {
+        //         console.log(`${this.name} barks!`);
+        //     }
+        // }
+
+        // const myDog = new Dog('Buddy', 'Labrador');
+        // myDog.speak(); // Outputs: Buddy barks!
+        // console.log(myDog.breed); // Outputs: Labrador
+
+
+        // polymorphism
+        
+        // class firstClass {
+        //     add() {
+        //         console.log("First Method")
+        //     }
+        // }
+        // class secondClass extends firstClass {
+        //     add() {
+        //         console.log(30 + 40);
+        //     }
+        // }
+        // class thirdClass extends secondClass {
+        //     add() {
+        //         console.log("Last Method")
+        //     }
+        // }
+        // let ob = new firstClass();
+        // let ob2 = new secondClass();
+        // let ob3 = new thirdClass();
+        // ob.add();
+        // ob2.add();
+        // ob3.add();
+
+
+
+        // promises 
+
+        // function fetchData() {
+        //     return new Promise((resolve, reject) => {
+        //         // Simulating an asynchronous operation
+        //         setTimeout(() => {
+        //         const data = { id: 1, name: 'John Doe' };
+        //         if (data) {
+        //             resolve(data); // Promise is fulfilled
+        //         } else {
+        //             reject('Error occurred'); // Promise is rejected
+        //         }
+        //         }, 2000);
+        //     });
+        // }
+
+        // fetchData()
+        // .then(data => {
+        //     console.log('Success:', data);
+        // })
+        // .catch(error => {
+        //     console.log('Error:', error);
+        // });
+
+
+            
+        // async await example
+
+        // function resolveAfter2Seconds() {
+        //     return new Promise(resolve => {
+        //         setTimeout(() => {
+        //         resolve('Resolved');
+        //         }, 2000);
+        //     });
+        // }
+
+        // async function asyncFunction() {
+        //     console.log('Before');
+            
+        //     const result = await resolveAfter2Seconds();
+        //     console.log(result);
+            
+        //     console.log('After');
+        // }
+
+        // asyncFunction();
+
+        // console.log('After 2');
+
 
     </script>
 </body>
