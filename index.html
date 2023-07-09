@@ -466,53 +466,63 @@
         //     console.log('Error:', error);
         // });
 
-        function addTwoNumbers(x, y){
-            return new Promise((resolve, reject)=>{
-                setTimeout(()=>{
-                    if(x && y){
-                        resolve(x + y)
-                    }else{
-                        reject("Error")
-                    }
-                }, 2000)
-            })
+        // function addTwoNumbers(x, y){
+        //     return new Promise((resolve, reject)=>{
+        //         setTimeout(()=>{
+        //             if(x && y){
+        //                 resolve(x + y)
+        //             }else{
+        //                 reject("Error")
+        //             }
+        //         }, 2000)
+        //     })
             
-        }
+        // }
 
-        // let sum = addTwoNumbers(1,1)
-        // console.log(sum+10)
+        // // let sum = addTwoNumbers(1,1)
+        // // console.log(sum+10)
 
-        addTwoNumbers(1, null).then(response =>{
-            console.log(response + 10)
-        }).catch(error=>{
-            console.log(error)
-        })
+        // addTwoNumbers(1, null).then(response =>{
+        //     console.log(response + 10)
+        // }).catch(error=>{
+        //     console.log(error)
+        // })
         
 
 
             
         // async await example
 
-        // function resolveAfter2Seconds() {
-        //     return new Promise(resolve => {
-        //         setTimeout(() => {
-        //         resolve('Resolved');
-        //         }, 2000);
-        //     });
-        // }
+        function resolveAfter2Seconds() {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    resolve('Resolved');
+                }, 2000);
+            });
+        }
 
-        // async function asyncFunction() {
-        //     console.log('Before');
+        resolveAfter2Seconds().then(res=>{
+            console.log(res)
+            console.log('After');
+            console.log('After 2');
+            console.log('After 3');
+        }).catch(err=>{
+            console.log(err)
+        })
+
+        async function asyncFunction() {
+            console.log('Before');
             
-        //     const result = await resolveAfter2Seconds();
-        //     console.log(result);
-            
-        //     console.log('After');
-        // }
+            const result = await resolveAfter2Seconds();
+            console.log(result);
+            console.log('After');
+        }
+        asyncFunction();
 
-        // asyncFunction();
-
-        // console.log('After 2');
+       
+        console.log('After 2');
+        console.log('After 2');
+        console.log('After 2');
 
 
     </script>
